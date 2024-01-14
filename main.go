@@ -13,5 +13,5 @@ func main() {
 	SmokingDatabase = mongoClient.Database("SmokingDatabase")
 	defer config.MongoCloseConnection(mongoClient)
 
-	config.StartGinServer(8080)
+	config.StartGinServer(SmokingDatabase, 8080)
 }
